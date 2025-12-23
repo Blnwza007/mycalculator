@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    min-height: 100vh;
+    overflow: hidden;
+}
+main {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    background: black;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px ;
+    border: 2px rgb(134, 134, 134) solid;
+}
+.calculator-wrapper {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+}
+.numbers {
+    display: flex;
+    width: 120px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.numbers button, .operator button {
+    width: 35px;
+    height: 30px;
+    text-align: center;
+}
+.operator  {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.display input {
+    width: 150px;
+    height: 20px;
+    border: 2px solid rgb(134, 134, 134);
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    outline: none;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    color: lightgreen;
+    text-align: right;
+    font-size: 15px;
+    padding: 5px;
+}
+.buttonPanel {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+#dot {
+    margin-left: 40px;
+}
+input::placeholder {
+    font-size: 15px;
+    color: lightgreen;
+}
+[id^="num"]:hover, [id^="num"]:focus, #dot:hover, #dot:focus{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transition: all 0.2s ease;
+}
+[id^="op-"]:hover, [id^="op-"]:focus {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    transition: all 0.2s ease;
+}
+#equals:hover, #equals:focus {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+    transition: all 0.2s ease;
+}
+#del:hover, #del:focus, #deleteALL:hover, #deleteALL:focus {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+    transition: all 0.2s ease;
+}
+@media (max-width: 767px) {
+    main {
+        height: 350px;
+    }
+    .numbers {
+        width: 140px;
+    }
+    .numbers button, .operator button {
+        width: 40px;
+        height: 40px;
+        border-radius: 0px black solid;
+    }
+    #dot {
+        margin-left: 45px;
+    }
+}
